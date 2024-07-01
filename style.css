@@ -46,20 +46,30 @@ body{
 .task{
     display: flex;
     justify-content: space-between; 
-    padding: 1em;
+    /* padding: 1em; */
+    padding: 14px 0;
+    border-bottom: 1px solid lightgray;
 }
 
 .task_check{
     display: flex;
     justify-content: space-between; 
-    padding: 1em; 
+    /* padding: 1em;  */
+    padding: 14px 0;
     background-color: lightgray;
+    border-bottom: 1px solid lightgray;
 }
 
 .task-done{
     text-decoration: line-through;
-    
+    padding: 14px;
+
 }
+.task-ing{
+    padding: 14px;
+
+}
+
 
 h1{
     margin-top: 10px;

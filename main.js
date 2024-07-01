@@ -65,31 +65,22 @@ function render(){
     let resultHTML = ''
     for(let i =0 ; i < list.length ; i++ ){
         if(list[i].isComplete == true){
-           resultHTML += ` <div class="task_check">
+           resultHTML += 
+           ` <div class="task_check">
             <div class="task-done"> ${list[i].taskContent} </div>
             <div>
             <button class="btn btn-primary"  onclick="toggleCompler('${list[i].id}')"><i class="fa-solid fa-rotate-left"></i></button>
             <button class="btn btn-primary"  onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
-            </div>
-            </div>`
+            </div></div>`
  
-
         } else{
             resultHTML += ` <div class="task">
-            <div> ${list[i].taskContent} </div>
+            <div class="task-ing"> ${list[i].taskContent} </div>
             <div>
             <button class="btn btn-primary" onclick="toggleCompler('${list[i].id}')"><i class="fa-solid fa-check"></i></button>
             <button class="btn btn-primary" onclick="deleteTask('${list[i].id}')"><i class="fa-solid fa-trash"></i></button>
             </div>
             </div>`
-     
-
-
-
-
-
-
-
         }  
     }
     document.getElementById("task-board").innerHTML = resultHTML
