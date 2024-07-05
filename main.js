@@ -90,11 +90,11 @@ function toggleCompler(id){
     for(let i=0; i<taskList.length; i++){
         if(taskList[i].id == id){
             taskList[i].isComplete = !taskList[i].isComplete
+
             break
         }
     }
-    render()
-    console.log(taskList)
+    filter()
 }
 
 // function deleteTask(id){
@@ -110,22 +110,23 @@ function deleteTask(id){
             taskList.splice(i, 1)
             break
         }
-    } // 진행중, 끝남 탭에서 삭제할때 화면 적용
-    for(let i=0; i<filterList.length; i++){
-        if(filterList[i].id == id){
-            filterList.splice(i, 1)
-            break
-        }
+    // } // 진행중, 끝남 탭에서 삭제할때 화면 적용
+    // for(let i=0; i<filterList.length; i++){
+    //     if(filterList[i].id == id){
+    //         filterList.splice(i, 1)
+    //         break
+    //     }
     }
-    render()
+    filter()
 }
 
 function filter(event){
+    if(event){
+    mode = event.target.id
     underLine.style.left = event.currentTarget.offsetLeft + "px"
     underLine.style.width = event.currentTarget.offsetWidth + "px"
     underLine.style.top = event.currentTarget.offsetTop +event.currentTarget.offsetHeight+ "px"
-
-    mode = event.target.id
+    }
     filterList = []
     if(mode === "all"){
         //전체리스트 보여줌
