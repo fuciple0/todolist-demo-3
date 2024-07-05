@@ -23,8 +23,8 @@ for(let i =1; i < tabs.length; i++){
         filter(event)
     })
 }
-//할일을 입력하고 나면 입력창이 자동으로 비워지게 해보자!! 
-taskInput.addEventListener('focus',function(){taskInput.value=""})
+// //할일을 입력하고 나면 입력창이 자동으로 비워지게 해보자!! 
+// taskInput.addEventListener('focus',function(){taskInput.value=""})
 
 addButton.addEventListener("click",addTask)
 //taskInput 이벤트 - 엔터키 입력
@@ -48,8 +48,9 @@ function addTask(){
         isComplete:false
     }
     taskList.push(task)
-    console.log(taskList)
+    // console.log(taskList)
     render()
+    taskInput.value=""
 }
 
 
